@@ -28,7 +28,7 @@
 
         .topsection {
             width: 100%;
-            height: 22em;
+            height: 20em;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -52,16 +52,57 @@
             flex-direction: row;
             justify-content: space-evenly;
         }
+        .infosection{
+            margin: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .infosection p, .infosection li {
+            color: #505050;
+        }
+
+        button {
+            padding: 1em 2.5em;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 0.7em;
+            background-color: #01a982;
+            color: white;
+        }
+        button:hover {
+            background-color: #1bbe98;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgb(12 182 143 / 33%);
+        }
         
 
 	</style>
 </head>
 <body>
     <div class="sitecontent">
-        <div class=" topsection" style="  background: url(https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20211012073750_ewioloyujp.jpg); background-size: cover;">
-            <p class="title">Ojima - Dining Info</p>
-            <p class="subtitle">Cafeteria is services by Aim Services CO., LTD.</p>
-            <p class="subtitle">Contact: +81 3 5878 2824</p>
+        <div class=" topsection" style="background: url(https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20211012073750_ewioloyujp.jpg); background-size: cover;">
+            <img style="max-width: 60px;" src="https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20210827023828_pawhxtukxz.png" alt="icon" width="58" height="58">
+            <p class="title">Beijing - Dining Info</p>
+            <p class="subtitle">Take a break</p>
+            <p class="subtitle">Contact info coming soon</p>
+        </div>
+        <div class="infosection">
+            <h2>Break Room Features</h2>
+            <p>The following are common amenities located in break areas at your site. If you notice a vending, coffee, or other break room item that needs attention, please submit a service request to the Workplace Help Desk</p>
+            <ul>
+                <li>Water dispenser</li>
+                <li>Fresh Ground Coffee</li>
+                <li>Tea</li>
+                <li>Refrigerators</li>
+                <li>Microwave ovens</li>
+                <li>Disinfection cabinets</li>
+                <li>Getting free beverages</li>
+                <li>Machines for free coffee and tea are available at each E-club in the building</li>
+                <li>Vending machines are located at the E-club</li>
+            </ul>
+            <button>Workplace Help Desk</button>
         </div>
     </div>
 </body>

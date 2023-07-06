@@ -31,50 +31,89 @@
             flex-direction: row;
             justify-content: space-evenly;
         }
+        .hide {
+            display: none;
+        }
         
 
 	</style>
 </head>
 <body>
-    <div class="sitecontent">
-        <div class="selectors">
-            <div class="selector">
-                <p class="title">Site</p>
-                <select id="site-select" onchange="showSelected()">
-                    <option value="blank">Select a site</option>
-                    <option value="site-1">Site 1</option>
-                    <option value="site-2">Site 2</option>
-                </select>
-            </div>
-            <div class="selector">
-                <p class="title">Info:</p>
-                <select id="site-select" onchange="showSelected()">
-                    <option value="blank">Select a site</option>
-                    <option value="site-1">Site 1</option>
-                    <option value="site-2">Site 2</option>
-                </select>
-            </div>
-        </div>
-        <div id="site-1-content" style="display:none;">
-            <h3>Test Content 1</h2>
-        </div>
-        
-        <div id="site-2-content" style="display:none;">
-            <h3>Test Content 2</h2>
-        </div>
+    <label for="siteselector">Site Selector:</label>
+    <select id="siteselector" onchange="handleSelection()">
+        <option value="BJN">BJN</option>
+        <option value="SHC">SHC</option>
+        <option value="DLC">DLC</option>
+    </select>
+
+    <br><br>
+
+    <label for="infoselector">Info Selector:</label>
+    <select id="infoselector" onchange="handleSelection()">
+        <option value="Dining">Dining</option>
+        <option value="Amenities">Amenities</option>
+        <option value="Transportation">Transportation</option>
+    </select>
+
+    <div id="BJN-Dining" class="hide">
+        <h2>BJN Dining</h2>
+        <!-- Content for BJN Dining goes here -->
     </div>
-</body>
-<script>
-    function showSelected() {
-      var selectBox = document.getElementById("site-select");
-      var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-      if (selectedValue === "site-1") {
-        document.getElementById("site-1-content").style.display = "block";
-        document.getElementById("site-2-content").style.display = "none";
-      } else {
-        document.getElementById("site-1-content").style.display = "none";
-        document.getElementById("site-2-content").style.display = "block";
-      }
-    }
-  </script>
+
+    <div id="BJN-Amenities" class="hide">
+        <h2>BJN Amenities</h2>
+        <!-- Content for BJN Amenities goes here -->
+    </div>
+
+    <div id="BJN-Transportation" class="hide">
+        <h2>BJN Transportation</h2>
+        <!-- Content for BJN Transportation goes here -->
+    </div>
+
+    <div id="SHC-Dining" class="hide">
+        <h2>SHC Dining</h2>
+        <!-- Content for SHC Dining goes here -->
+    </div>
+
+    <div id="SHC-Amenities" class="hide">
+        <h2>SHC Amenities</h2>
+        <!-- Content for SHC Amenities goes here -->
+    </div>
+
+    <div id="SHC-Transportation" class="hide">
+        <h2>SHC Transportation</h2>
+        <!-- Content for SHC Transportation goes here -->
+    </div>
+
+    <div id="DLC-Dining" class="hide">
+        <h2>DLC Dining</h2>
+        <!-- Content for DLC Dining goes here -->
+    </div>
+
+    <div id="DLC-Amenities" class="hide">
+        <h2>DLC Amenities</h2>
+        <!-- Content for DLC Amenities goes here -->
+    </div>
+
+    <div id="DLC-Transportation" class="hide">
+        <h2>DLC Transportation</h2>
+        <!-- Content for DLC Transportation goes here -->
+    </div>
+
+    <script>
+        function handleSelection() {
+            var siteselector = document.getElementById("siteselector").value;
+            var infoselector = document.getElementById("infoselector").value;
+
+            // Hide all divs
+            var divs = document.getElementsByTagName("div");
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].classList.add("hide");
+            }
+
+            // Show the selected div
+            var selectedDiv = document.getElementById(siteselector + "-" + infoselector);
+            selectedDiv.classList.remove("hide");
+        }
+    </script>
 </html>

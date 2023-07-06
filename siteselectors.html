@@ -4,25 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site information for HPE China offices">
+
+    <!-- HPE Required -->
+    <meta name="hp_design_version" content="hpe.1.0">
+    <meta name="keywords" content="HPE Connect, China site information">
+    <meta name="lifecycle" content="applied_use">
+    <meta name="robots" content="follow, index">
+    <meta name="segment" content="Corporate">
+    <meta name="target_country" content="cn">
+    <meta name="web_section_id" content="R12284">
+
     <title>HPE China Site Info</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- HPE Required -->
+    <script src="https://h50007.www5.hpe.com/hfws-static/js/framework/jquery/v-3-6-0/jquery.js"></script>
+	<script src="https://h50007.www5.hpe.com/hfws/us/en/hpe/latest.r/root?contentType=js&switchToCHF=true"></script>
+    <script type="text/javascript" async defer 
+        src="https://www.hpe.com/global/metrics/easy/basic_measurement.js">
+    </script>
+
     <style>
+
         * {
             font-family: 'Roboto', sans-serif;
         }
-
+        body {
+            margin: 0;
+        }
+        h2 {
+            text-align: center;
+        }
         .sitecontent {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-bottom: 5rem;
         }
-
+        .topsection {
+            width: 100%;
+            height: 20em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
         .title {
-            font-size: 1.5em;
+            font-size: 2em;
             font-weight: bold;
+        }
+        .subtitle {
+            margin: 4px 0px;
+            font-size: 0.9em;
+        }
+        ul {
+            margin-bottom: 1em;
+            text-align: left;
         }
 
         .selectors {
@@ -30,90 +73,219 @@
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
+            align-items: center;
+            padding: 25px 0px;
+        }
+        .selectors > * {
+            display: flex;
+            flex-direction: column;
+        }
+        .selectorlabel {
+            font-size: 1.7rem;
+            font-weight: bold;
+            padding: 0 0 5px 3px;
+        }
+        .selectordropdown {
+            border: 1px solid #dddddd;
+            border-radius: 6px;
+            padding: 5px;
+        }
+
+        .infosection {
+            padding: 2em 0em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .infosection p, .infosection li {
+            color: #505050;
+            margin: .5rem 2.5rem;
+            text-align: center;
+        }
+        .infosection li {
+            text-align: left;
+        }
+        .grey{
+            background-color: #efefef
+        }
+        button {
+            padding: 1em 2.5em;
+            margin: 2rem 0rem;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 0.7em;
+            background-color: #01a982;
+            color: white;
+        }
+        button:hover {
+            background-color: #1bbe98;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgb(12 182 143 / 33%);
         }
         .hide {
             display: none;
         }
+        #footer{
+            margin-top: 100px;
+        }
         
-
 	</style>
 </head>
+
+<!-- HPE Required -->
+<div id="header" class="header"></div>
+
 <body>
-    <label for="siteselector">Site Selector:</label>
-    <select id="siteselector" onchange="handleSelection()">
-        <option value="BJN">BJN</option>
-        <option value="SHC">SHC</option>
-        <option value="DLC">DLC</option>
-    </select>
+    <div class="selectors">
+        <div class="siteselectorsection">
+            <label for="siteselector" class="selectorlabel">Site</label>
+            <select id="siteselector" class="selectordropdown" onchange="handleSelection()">
+                <option value="" disabled selected>Select site</option>
+                <option value="BJN">Beijing BJN</option>
+                <option value="SHC">Shanghai SHC</option>
+                <option value="DLC">Dalian DLC</option>
+            </select>
+        </div>
+        <div class="infoselectorsection">
+            <label for="infoselector" class="selectorlabel">Info</label>
+            <select id="infoselector" class="selectordropdown" onchange="handleSelection()">
+                <option value="" disabled selected>Select Info Type</option>
+                <option value="Dining">Dining</option>
+                <option value="Amenities">Amenities</option>
+                <option value="Transportation">Transportation</option>
+            </select>
+        </div>
 
-    <br><br>
-
-    <label for="infoselector">Info Selector:</label>
-    <select id="infoselector" onchange="handleSelection()">
-        <option value="Dining">Dining</option>
-        <option value="Amenities">Amenities</option>
-        <option value="Transportation">Transportation</option>
-    </select>
-
-    <div id="BJN-Dining" class="hide">
-        <h2>BJN Dining</h2>
-        <!-- Content for BJN Dining goes here -->
+    </div>
+    <div class="siteinfosection">
+        <h2 style="font-weight: 400;">Select desired site and info above</h2>
+        <!-- Content for BJN Amenities goes here -->
     </div>
 
-    <div id="BJN-Amenities" class="hide">
+    <div id="BJN-Dining" class="siteinfosection hide">
+        <div class="sitecontent">
+            <div class=" topsection" style="background: url(https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20211012073750_ewioloyujp.jpg); background-size: cover;">
+                <img style="max-width: 60px;" src="https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20210827023828_pawhxtukxz.png" alt="icon" width="58" height="58">
+                <p class="title">Beijing - Dining Info</p>
+                <p class="subtitle">Take a break</p>
+                <p class="subtitle">Contact info coming soon</p>
+            </div>
+            <div class="infosection">
+                <h2>Break Room Features</h2>
+                <p>The following are common amenities located in break areas at your site. If you notice a vending, coffee, or other break room item that needs attention, please submit a service request to the Workplace Help Desk</p>
+                <ul>
+                    <li>Water dispenser</li>
+                    <li>Fresh Ground Coffee</li>
+                    <li>Tea</li>
+                    <li>Refrigerators</li>
+                    <li>Microwave ovens</li>
+                    <li>Disinfection cabinets</li>
+                    <li>Getting free beverages</li>
+                    <li>Machines for free coffee and tea are available at each E-club in the building</li>
+                    <li>Vending machines are located at the E-club</li>
+                </ul>
+                <a href="http://www.hpe.com/contact/gre" target="_blank"><button>Workplace Help Desk</button></a>
+            </div>
+            <div class="infosection grey">
+                <h2>TIDU (Wang Jing)<br>提督 （望京万科店</h2>
+                <p>Location: Wangjing Wanke Times Center, Tower A, 1 Floor, Wang Jing Street</p>
+                <p>Cuisines: Chinese, Beijing</p>
+                <p>Meals: Lunch, Dinner</p>
+                <p>Tel: 86 10 6471 8880</p>
+                <p>Hours: 11:00 AM - 14:00 PM / 17:00 PM - 21:00 PM</p>
+            </div>
+            <div class="infosection">
+                <h2>Yin Chu (Wanke)<br>隐厨 中国菜馆（望京万科店）</h2>
+                <p>Location: Wangjing Wanke Times Center, Tower A, 1 Floor, Wang Jing Street</p>
+                <p>Cuisines: Chinese</p>
+                <p>Meals: Lunch, Dinner</p>
+                <p>Tel: 86 10 8556 3266 / 86 150 1002 8098</p>
+                <p>Hours: 11:00 AM – 22:00 PM</p>
+            </div>
+            <div class="infosection grey">
+                <h2>PAK PAK (Fu Tong)<br>喜悦泰 （阜通店）</h2>
+                <p>Location: ChaoYang District Tower C, Building 1, Yard 8, Guangshun South Street, LSH Center Tower E, B1 Floor.</p>
+                <p>Cuisines: Asian, Thai</p>
+                <p>Meals: Lunch, Dinner</p>
+                <p>Tel: 86 10 5351 7521</p>
+                <p>Hours: 11:00 AM – 21:30 PM</p>
+            </div>
+            <div class="infosection">
+                <h2>Bloomberg Brewery Bistro<br>(Wang Jing SOHO)<br>布隆博格德国酒馆<br>(望京SOHO店)</h2>
+                <p>Location: ChaoYang District Fu Tong East Avenue 1, Wang Jing SOHO tower 3, G Floor 1111</p>
+                <p>Cuisines: German, European, Central European</p>
+                <p>Meals: Lunch, Dinner, Late Night, Drinks</p>
+                <p>Tel: 86 10 6470 8960</p>
+                <p>Hours: 11:30 AM - 14:00 PM / 17:30 PM - 23:00 PM</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="BJN-Amenities" class="siteinfosection hide">
         <h2>BJN Amenities</h2>
         <!-- Content for BJN Amenities goes here -->
     </div>
 
-    <div id="BJN-Transportation" class="hide">
+    <div id="BJN-Transportation" class="siteinfosection hide">
         <h2>BJN Transportation</h2>
         <!-- Content for BJN Transportation goes here -->
     </div>
 
-    <div id="SHC-Dining" class="hide">
+    <div id="SHC-Dining" class="siteinfosection hide">
         <h2>SHC Dining</h2>
         <!-- Content for SHC Dining goes here -->
     </div>
 
-    <div id="SHC-Amenities" class="hide">
+    <div id="SHC-Amenities" class="siteinfosection hide">
         <h2>SHC Amenities</h2>
         <!-- Content for SHC Amenities goes here -->
     </div>
 
-    <div id="SHC-Transportation" class="hide">
+    <div id="SHC-Transportation" class="siteinfosection hide">
         <h2>SHC Transportation</h2>
         <!-- Content for SHC Transportation goes here -->
     </div>
 
-    <div id="DLC-Dining" class="hide">
+    <div id="DLC-Dining" class="siteinfosection hide">
         <h2>DLC Dining</h2>
         <!-- Content for DLC Dining goes here -->
     </div>
 
-    <div id="DLC-Amenities" class="hide">
+    <div id="DLC-Amenities" class="siteinfosection hide">
         <h2>DLC Amenities</h2>
         <!-- Content for DLC Amenities goes here -->
     </div>
 
-    <div id="DLC-Transportation" class="hide">
+    <div id="DLC-Transportation" class="siteinfosection hide">
         <h2>DLC Transportation</h2>
         <!-- Content for DLC Transportation goes here -->
     </div>
+</body>
 
-    <script>
-        function handleSelection() {
-            var siteselector = document.getElementById("siteselector").value;
-            var infoselector = document.getElementById("infoselector").value;
+<!-- Script to hide/show content based on selectors -->
+<script>
+    function handleSelection() {
+        var siteselector = document.getElementById("siteselector").value;
+        var infoselector = document.getElementById("infoselector").value;
 
-            // Hide all divs
-            var divs = document.getElementsByTagName("div");
-            for (var i = 0; i < divs.length; i++) {
-                divs[i].classList.add("hide");
-            }
+        var sectionToShow = siteselector + "-" + infoselector;
 
-            // Show the selected div
-            var selectedDiv = document.getElementById(siteselector + "-" + infoselector);
-            selectedDiv.classList.remove("hide");
+        var sectionElements = document.getElementsByClassName("siteinfosection");
+        for (var i = 0; i < sectionElements.length; i++) {
+            sectionElements[i].style.display = "none";
         }
-    </script>
+
+        if (siteselector && infoselector) {
+            var selectedSection = document.getElementById(sectionToShow);
+            if (selectedSection) {
+            selectedSection.style.display = "block";
+            }
+        }
+        }
+</script>
+
+<!-- HPE Required -->
+<div id="footer" class="footer"></div>
 </html>

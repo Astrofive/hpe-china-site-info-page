@@ -47,7 +47,7 @@
         }
         .topsection {
             width: 100%;
-            height: 20em;
+            padding: 40px 0px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -154,13 +154,12 @@
             <label for="infoselector" class="selectorlabel">Info</label>
             <select id="infoselector" class="selectordropdown" onchange="handleSelection()">
                 <option value="" disabled selected>Select Info Type</option>
-
                 <option value="CampusInfo">General Campus Info</option>
                 <option value="Dining">Dining</option>
                 <option value="Amenities">Amenities</option>
                 <option value="Wellness">Wellness</option>
                 <option value="Transportation">Transportation</option>
-                <option value="Staythenight">Staying the Night</option>
+                <option value="StayTheNight">Staying the Night</option>
                 <option value="Support">Support</option>
             </select>
         </div>
@@ -171,9 +170,27 @@
         <!-- Content for BJN Amenities goes here -->
     </div>
 
+
+    <div id="BJN-CampusInfo" class="siteinfosection hide">
+        <div class="sitecontent">
+            <div class="topsection" style="background: url(https://hpesmartcampus.com/files/20211227133018.jpg); background-size: cover;">
+                <img style="max-width: 60px;" src="https://hpesmartcampus.com/files/20211210100852.png" alt="icon" width="58" height="58">
+                <p class="title">Beijing, China (BJN)</p>
+                <p class="subtitle">3F, Building C, LSH Center</p>
+                <p class="subtitle">No.8 Guangshun Avenue South</p>
+                <p class="subtitle">Chaoyang District</p>
+                <p class="subtitle">Beijing, 100102</p>
+                <a href="https://www.google.com/maps/place/10-16+Futong+W+St,+Wang+Jing,+Chaoyang+Qu,+Beijing+Shi,+China,+100028/@39.997742,116.476888,16z/data=!4m5!3m4!1s0x35f1aa5ae75b0a25:0x6451dd0b2f0600a!8m2!3d39.9977419!4d116.476888?hl=en-US" target="_blank"><button>Map & Directions</button></a>
+            </div>
+            <div class="infosection">
+                <p>BJN01 site is located in the Building C LSH Center of Chaoyang district. Some amenities are shared with other occupants/companies.</p>
+            </div>
+        </div>
+    </div>
+
     <div id="BJN-Dining" class="siteinfosection hide">
         <div class="sitecontent">
-            <div class=" topsection" style="background: url(https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20211012073750_ewioloyujp.jpg); background-size: cover;">
+            <div class="topsection" style="background: url(https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20211012073750_ewioloyujp.jpg); background-size: cover;">
                 <img style="max-width: 60px;" src="https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20210827023828_pawhxtukxz.png" alt="icon" width="58" height="58">
                 <p class="title">Beijing - Dining Info</p>
                 <p class="subtitle">Take a break</p>
@@ -231,13 +248,144 @@
     </div>
 
     <div id="BJN-Amenities" class="siteinfosection hide">
-        <h2>BJN Amenities coming soon...</h2>
-        <!-- Content for BJN Amenities goes here -->
+        <div class="sitecontent">
+            <div class=" topsection" style="background: url(https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20220110093409_rwjiwbdaoi.jpg); background-size: cover;">
+                <img style="max-width: 60px;" src="https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20210915074203_xrefnunvif.png" alt="icon" width="58" height="58">
+                <p class="title">Beijing - Amenities</p>
+                <p class="subtitle">What we have to offer on campus</p>
+            </div>
+            <div class="infosection">
+                <h2>Mother's Room</h2>
+                <p>The Mother’s Room is a comfortable area in support of breastfeeding mothers returning to work after their maternity leave. It is available to employees on a “first-come, first-serve” basis. Mother’s Room located on 3rd floor, building D.</p>
+            </div>
+            <div class="infosection grey">
+                <h2>First Aid</h2>
+                <p>Emergency medicine cabinet located at Building D, 3rd floor, near by mailroom.</p>
+            </div>
+            <div class="infosection">
+                <h2>ATM (Bank of Dalian)</h2>
+                <p>Fu Tong East Avenue No. 10 Baoneng Center, tower B, 1 Floor.</p>
+            </div>
+            <div class="infosection grey">
+                <h2>ATM (Bank of Beijing)</h2>
+                <p>Wangjing Xiyuan No. 429, 101-102-201, Guangshun North Street, Chaoyang District.</p>
+            </div>
+        </div>
     </div>
 
+    <div id="BJN-Wellness" class="siteinfosection hide">
+        <div class="sitecontent">
+            <div class=" topsection" style="background: url(https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20220110093527_oaaldowpnv.jpg); background-size: cover;">
+                <img style="max-width: 60px;" src="https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20210915084722_sxljsgoebg.png" alt="icon" width="58" height="58">
+                <p class="title">Beijing - Wellness</p>
+                <p class="subtitle">Prioritize your Health</p>
+            </div>
+            <div class="infosection">
+                <h2>Supermonkey Gym</h2>
+                <p>SUPERMONKEY (LSH CENTER)</p>
+                <p>Address: B1, Tower G, Building 1, Yard 8, Guangshun South Street, Chaoyang District</p>
+                <p>Tel: 400 900 9166</p>
+                <p>Hour: 07:30 - 21:30</p>
+            </div>
+            <div class="infosection grey">
+                <h2>D-Space Gym</h2>
+                <p>Address: 1 Floor, Baoxinghuating, Fu An west road, Fu Tong west avenue, Chaoyang District.</p>
+                <p>Tel: 86 10 6413 9408</p>
+                <p>Hour: 07:00 - 23:00</p>
+            </div>
+            <div class="infosection">
+                <h2>Le Ke Sport</h2>
+                <p>Address: 3 Floor, New World Shopping Center, No. 16, Guangshun South Street, Chaoyang District</p>
+                <p>Tel: 86 13621282737</p>
+                <p>Hour: 7 x 24</p>
+            </div>
+            <div class="infosection grey">
+                <h2>Pharmacy</h2>
+                <p>Jin Xiang Da Yao Fang</p>
+                <p>Address: Gate B, Zone 4, Wang Jing Xi Yuan, Wang Jing street, Chaoyang District</p>
+                <p>Tel: 86 10 6470 5560</p>
+            </div>
+            <div class="infosection">
+                <h2>Headspace</h2>
+                <p>Meditation made easy.It's a highly rated science-backed meditation app used by over 62 million people in 190 countries around the world. Headspace makes meditation simple and accessible. It comes with proven benefits like less stress, sharper focus, better sleep, and improved relationships. It's so good, we decided to offer it to all HPE team members worldwide.</p>
+                <a href="https://work.headspace.com/hpe/member-enroll" target="_blank"><button>Enroll</button></a>
+            </div>
+            <div class="infosection grey">
+                <h2>Doctor On Demand</h2>
+                <p>With Doctor On Demand, you and your covered dependents can connect instantly with an experienced, licensed medical provider, psychiatrist, or therapist over secure video from your smartphone, tablet, or laptop.
+                    While Doctor On Demand professionals can assist with everyday and urgent care needs, such as cold and flu, allergies, skin and eye issues, and urinary tract infections (UTIs), they can also help with more specific mental health issues, like anxiety and stress, depression, insomnia, panic attacks, PTSD, and more</p>
+                <p>Call <a href="tel:1-800-997-6196">1-800-997-6196</a> or visit Doctor On Demand to get started</p>
+                <a href="https://doctorondemand.com/microsite/hpe/" target="_blank"><button>24/7 Virtual Healthcare</button></a>
+            </div>
+        </div>
+    </div>x
+
     <div id="BJN-Transportation" class="siteinfosection hide">
-        <h2>BJN Transportation coming soon...</h2>
-        <!-- Content for BJN Transportation goes here -->
+        <div class="sitecontent">
+            <div class=" topsection" style="background: url(https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20220105040206_ikdmeshhtg.jpg); background-size: cover;">
+                <img style="max-width: 60px;" src="https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20210826103425_bxswqikrwc.png" alt="icon" width="58" height="58">
+                <p class="title">Beijing - Transportation</p>
+                <p class="subtitle">Get around</p>
+            </div>
+            <div class="infosection">
+                <h2>Site Shuttles</h2>
+                <p>The site is well serviced by Public Transport (Bus & Metro Train). There are no specific HPE shuttle services provided at this site.</p>
+            </div>
+            <div class="infosection grey">
+                <h2>Didi</h2>
+                <p>Planning a trip is easy with Didi, the address could be followed by “Tower C, Building 1, Yard 8, Guangshun South Street, Chaoyang District". To request a ride, you must download the Didi app.</p>
+            </div>
+            <div class="infosection">
+                <h2>Subway</h2>
+                <p>You can find the metro station in B1 of LSH Center, which is named “Fu Tong” of line 14 (East).</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="BJN-StayTheNight" class="siteinfosection hide">
+        <div class="sitecontent">
+            <div class=" topsection" style="background: url(https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20210915091413_jmffjnrjcy.jpg); background-size: cover;">
+                <img style="max-width: 60px;" src="https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20210915091442_gdwsjgordb.png" alt="icon" width="58" height="58">
+                <p class="title">Beijing - Stay The Night</p>
+                <p class="subtitle">Places to spend the night</p>
+            </div>
+            <div class="infosection">
+                <h2>Hyatt Regency Beijing Wangjing</h2>
+                <p>Hyatt Regency Beijing Wangjing is the first Hyatt Regency in the Capital of China, the core brand of Hyatt Hotels and Resorts. Located in the heart of the vibrant Wangjing Central Business District, the hotel is designed to create an “Urban Forest”, with its unique site located between parks and the interior space colored with natural materials.</p>
+                <a href="http://hyatt-regency-beijing-wangjing.31td.com/index.html" target="_blank"><button>Tour the Hotel</button></a>
+            </div>
+            <div class="infosection grey">
+                <h2>Holiday Inn Beijing Focus Square (IHG Hotel)</h2>
+                <p>The Holiday Inn Beijing Focus Square is the newest and tallest international mid-scale hotel at Wangjing’s famous business hub which is within walking distance to many multinational companies while surrounded by a wide variety of dining and shopping outlets.</p>
+                <a href="https://www.ihg.com.cn/holidayinn/hotels/gb/en/beijing/pegfd/hoteldetail?fromRedirect=true&qSrt=sBR&qDest=Beijing&qRms=1&qAdlt=1&qChld=0&qCiD=22&qCiMy=092021&qCoD=23&qCoMy=092021&qAAR=6CBARC&qRtP=6CBARC&setPMCookies=true&qpMn=0&srb_u=1" target="_blank"><button>Tour the Hotel</button></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="BJN-Support" class="siteinfosection hide">
+        <div class="sitecontent">
+            <div class=" topsection" style="background: url(https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20210915092832_hmwrvnajqa.jpg); background-size: cover;">
+                <img style="max-width: 60px;" src="https://hpesmartcampus.com/files/qfeovr457m8tjkfk89pr7ru2/files/20210915092204_nixcmjlnmk.png" alt="icon" width="58" height="58">
+                <p class="title">Beijing - Support</p>
+                <p class="subtitle">We are here to help</p>
+            </div>
+            <div class="infosection">
+                <h2>Workplace Help Desk</h2>
+                <p>Search for a topic or submit a request.</p>
+                <a href="https://hpglobal.fms.issworld.com/p/web/workplaceServices?isshr=hpe" target="_blank"><button>Request Workplace Help</button></a>
+            </div>
+            <div class="infosection grey">
+                <h2>myI.T.</h2>
+                <p>Get IT support that is personal, easy to use, and right for you depending on your situation.</p>
+                <a href="https://myitsupport.ext.hpe.com/ITSHome" target="_blank"><button>myITsupport</button></a>
+            </div>
+            <div class="infosection">
+                <h2>App Support</h2>
+                <p>Need help with the campus app? Submit an HPE Connect ticket in the #ask-workplace channel: (Slack app required).</p>
+                <a href="cxapp-hpecampus://dl/p_external?url=slack%3A%2F%2Fchannel%3Fid%3DC02PZF7HEKV%26team%3DT01T695F6AE" target="_blank"><button>#ask-workplace</button></a>
+            </div>
+        </div>
     </div>
 
     <div id="SHC-Dining" class="siteinfosection hide">
